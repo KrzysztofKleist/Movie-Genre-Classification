@@ -1,4 +1,4 @@
-# Movie Genre Classification
+# Movie Genre Classification - posters only
 
 ## Initial steps:
 
