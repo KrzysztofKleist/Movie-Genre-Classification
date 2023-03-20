@@ -10,3 +10,7 @@
 \* At this point the data has to be packed to the .zip file, also with train.txt as the list of labels. Then the .zip files need to be uploaded to google.drive as google.colab was used to run the first tests with AlexNet model.
 
 \*\* Done in google.colab.
+
+### Questions:
+
+- Should the problem be considered multi-label classification (more than one prediction allowed in the output)?
