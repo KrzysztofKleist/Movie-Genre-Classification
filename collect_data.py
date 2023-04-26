@@ -1,4 +1,5 @@
-from utilities import extract_frame, color_check, video_available, check_folder
+from utilities import extract_frame, color_check, video_available, check_folder, create_dir
+
 from multiprocessing import Pool
 import pandas as pd
 import time
@@ -29,15 +30,16 @@ def download_data(start_range, end_range):
 
 
 if __name__ == '__main__':
+    
+    create_dir(r'D:\frames')
 
     start = time.time()
-
-    n = 2000
+    n = len(final_df)
     step = 50
     intervals = [(i, i+step) for i in range(0, n, step) if i+step <= n]
     last_interval = [(n-(n % step), n)]
     intervals = intervals + last_interval
-    print(intervals)
+    # print(intervals)
 
     pool = Pool(10)
 
