@@ -11,12 +11,13 @@ import torchvision.transforms.functional as TF
 
 class MovieFrameDataset(Dataset):
 
-    def __init__(self, root_dir, csv, transform=None):
+    def __init__(self, root_dir, csv, transform=None, raw=False):
 
         super().__init__()
         self.root_dir = root_dir
         self.csv = csv
         self.transform = transform
+        self.raw = raw
 
         df = pd.read_csv(csv, sep="\t")
 
@@ -36,17 +37,20 @@ class MovieFrameDataset(Dataset):
         
         print(self.elements[index])
 
-        resized_img = transforms.Resize((700, 1000))(img)
-        cropped_img = TF.crop(resized_img, 90, 0, 520, 1000)
-
         target = self.labels[index]
         
-
+        if self.raw:
+            # two following steps of transform are not enclosed in transform 
+            # parameter as cropping in that way is not available in transforms
+            # library
+            # they are only used for raw images
+            img = transforms.Resize((700, 1000))(img)
+            img = TF.crop(img, 90, 0, 520, 1000)    
         
-        if self.transform is not None:
-            cropped_img = self.transform(cropped_img)
+        if self.transform is not None:    
+            img = self.transform(img)
             
         
-        image, label = cropped_img, target
+        image, label = img, target
         
         return torch.tensor(image, dtype=torch.float32), torch.tensor(label, dtype=torch.float32)

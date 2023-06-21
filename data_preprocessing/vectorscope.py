@@ -34,7 +34,6 @@ for subfolder in os.listdir(origin_path):
 create_dir(destination_path)
 
 # vec_list=[]
-count = 0
 
 for src_path in tqdm(path_list):
     try:
@@ -78,11 +77,6 @@ for src_path in tqdm(path_list):
     except Exception as e:
         print("error")
         pass 
-       
-    # count += 1
-    
-    # if count >= 1000:
-    #     break
     
 end = time.time()
 print('time:', end - start)
