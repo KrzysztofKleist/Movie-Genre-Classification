@@ -1,0 +1,107 @@
+1. AlexNet raw, aug none, distribution random, 8 epochs
+python experiment_slcr.py --frames raw --augmentation none --data_distribution random --model alexnet --batch_size 64 --lr 0.005 --num_epochs 8 --step_size 2 --gamma 0.5
+
+2. ResNet-50 raw, aug none, distribution random, 7 epochs
+python experiment_slcr.py --frames raw --augmentation none --data_distribution random --model resnet --batch_size 64 --lr 0.005 --num_epochs 7 --step_size 2 --gamma 0.5
+
+3. VGG-16 raw, aug none, distribution random, 8 epochs
+python experiment_slcr.py --frames raw --augmentation none --data_distribution random --model vgg --batch_size 16 --lr 0.005 --num_epochs 6 --step_size 2 --gamma 0.5
+
+4. ResNet-50 raw, aug all, distribution random, 3 epochs
+python experiment_slcr.py --frames raw --augmentation all --data_distribution random --model resnet --batch_size 64 --lr 0.005 --num_epochs 8 --step_size 2 --gamma 0.01
+
+5. ResNet-50 raw, aug all, distribution random, 3 epochs
+python experiment_slcr.py --frames raw --augmentation all --data_distribution random --model resnet --batch_size 64 --lr 0.005 --num_epochs 3 --step_size 2 --gamma 0.01
+
+6. ResNet-50 raw, aug all, distribution random, 7 epochs
+python experiment_slcr.py --frames raw --augmentation all --data_distribution random --model resnet --batch_size 64 --lr 0.005 --num_epochs 7 --step_size 3 --gamma 0.01
+
+7. VGG-16 raw, aug all, distribution random, 8 epochs
+screen python experiment_slcr.py --frames raw --augmentation all --data_distribution random --model vgg --batch_size 16 --lr 0.005 --num_epochs 8 --step_size 2 --gamma 0.01
+
+
+
+8. ResNet-50 raw, aug all, distribution random, 4 epochs
+python experiment_slcr.py --frames raw --augmentation all --data_distribution random --model resnet --batch_size 64 --lr 0.005 --num_epochs 4 --step_size 2 --gamma 0.01
+EPOCH DURATION: 35 min
+
+9. VGG-16 raw, aug all, distribution random, 4 epochs
+python experiment_slcr.py --frames raw --augmentation all --data_distribution random --model vgg --batch_size 16 --lr 0.005 --num_epochs 4 --step_size 2 --gamma 0.01
+EPOCH DURATION: 102 min
+
+10. AlexNet raw, aug all, distribution random, 4 epochs
+python experiment_slcr.py --frames raw --augmentation all --data_distribution random --model alexnet --batch_size 64 --lr 0.005 --num_epochs 4 --step_size 2 --gamma 0.01
+EPOCH DURATION: 35 min
+
+
+
+11. ResNet-50 vec, aug all, distribution random, 4 epochs
+python experiment_slcr.py --frames vec --augmentation all --data_distribution random --model resnet --batch_size 64 --lr 0.001 --num_epochs 4 --step_size 2 --gamma 0.01
+EPOCH DURATION: 19 min
+
+12. VGG-16 vec, aug all, distribution random, 4 epochs
+python experiment_slcr.py --frames vec --augmentation all --data_distribution random --model vgg --batch_size 16 --lr 0.001 --num_epochs 4 --step_size 2 --gamma 0.01
+EPOCH DURATION: 59 min
+
+13. AlexNet vec, aug all, distribution random, 4 epochs
+python experiment_slcr.py --frames vec --augmentation all --data_distribution random --model alexnet --batch_size 64 --lr 0.001 --num_epochs 4 --step_size 2 --gamma 0.01
+EPOCH DURATION: 17 min
+        
+
+
+14. ResNet-50 raw, aug all, distribution separate, 4 epochs
+python experiment_slcr.py --frames raw --augmentation all --data_distribution separate --model resnet --batch_size 64 --lr 0.005 --num_epochs 4 --step_size 2 --gamma 0.01
+EPOCH DURATION: 42 min
+
+15. VGG-16 raw, aug all, distribution separate, 4 epochs
+python experiment_slcr.py --frames raw --augmentation all --data_distribution separate --model vgg --batch_size 16 --lr 0.005 --num_epochs 4 --step_size 2 --gamma 0.01
+EPOCH DURATION: 116 min
+
+16. AlexNet raw, aug all, distribution separate, 4 epochs
+python experiment_slcr.py --frames raw --augmentation all --data_distribution separate --model alexnet --batch_size 64 --lr 0.005 --num_epochs 4 --step_size 2 --gamma 0.01
+EPOCH DURATION: 35 min
+
+
+
+17. ResNet-50 vec, aug all, distribution separate, 4 epochs
+python experiment_slcr.py --frames vec --augmentation all --data_distribution separate --model resnet --batch_size 64 --lr 0.001 --num_epochs 4 --step_size 2 --gamma 0.01
+EPOCH DURATION: 23 min
+
+18. VGG-16 vec, aug all, distribution separate, 4 epochs
+python experiment_slcr.py --frames vec --augmentation all --data_distribution separate --model vgg --batch_size 16 --lr 0.001 --num_epochs 4 --step_size 2 --gamma 0.01
+EPOCH DURATION: 47 min
+
+19. AlexNet vec, aug all, distribution separate, 4 epochs
+python experiment_slcr.py --frames vec --augmentation all --data_distribution separate --model alexnet --batch_size 64 --lr 0.001 --num_epochs 4 --step_size 2 --gamma 0.01
+EPOCH DURATION: 17 min
+
+
+
+20. VisionTransformer-Base-16 raw, aug all, distribution random, 4 epochs
+python experiment_slcr.py --frames raw --augmentation all --data_distribution random --model vit --batch_size 64 --lr 0.005 --num_epochs 4 --step_size 2 --gamma 0.01
+EPOCH DURATION: 47 min
+
+21. VisionTransformer-Base-16 vec, aug all, distribution random, 4 epochs
+python experiment_slcr.py --frames vec --augmentation all --data_distribution random --model vit --batch_size 64 --lr 0.005 --num_epochs 4 --step_size 2 --gamma 0.01
+EPOCH DURATION: 26 min
+
+22. VisionTransformer-Base-16 raw, aug all, distribution separate, 4 epochs
+python experiment_slcr.py --frames raw --augmentation all --data_distribution separate --model vit --batch_size 64 --lr 0.005 --num_epochs 4 --step_size 2 --gamma 0.01
+EPOCH DURATION: 44 min
+
+23. VisionTransformer-Base-16 vec, aug all, distribution separate, 4 epochs
+python experiment_slcr.py --frames vec --augmentation all --data_distribution separate --model vit --batch_size 64 --lr 0.005 --num_epochs 4 --step_size 2 --gamma 0.01
+EPOCH DURATION: 25 min
+
+
+
+
+24. VisionTransformer-Base-16 raw, aug all, distribution random, 4 epochs
+python experiment_slcr.py --frames raw --augmentation all --data_distribution random --model vit --batch_size 64 --lr 0.001 --num_epochs 4 --step_size 2 --gamma 0.01
+EPOCH DURATION: 47 min
+
+25. ResNet-50 raw, aug all, distribution random, 4 epochs
+python experiment_slcr.py --frames raw --augmentation all --data_distribution random --model resnet --batch_size 64 --lr 0.001 --num_epochs 4 --step_size 2 --gamma 0.01
+EPOCH DURATION: 35 min
+
+    

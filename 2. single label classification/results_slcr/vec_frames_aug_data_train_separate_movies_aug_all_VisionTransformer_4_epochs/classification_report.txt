@@ -1,0 +1,16 @@
+batch_size: 64, lr: 0.005, num_epochs: 4, step_size: 2, gamma: 0.01
+accuracy: 42.17%
+Genre           Precision    Recall    F1-score    Support
+drama               0.353     0.169       0.229      750.0
+act_adv             0.452     0.415       0.433     2503.0
+com_rom             0.391     0.395       0.393     1607.0
+thr_hor_cri         0.424     0.541       0.475     2090.0
+micro avg           0.422     0.422       0.422     6950.0
+macro avg           0.405     0.380       0.382     6950.0
+weighted avg        0.419     0.422       0.414     6950.0
+samples avg         0.422     0.422       0.422     6950.0
+Genre               Drama      Act_Adv      Com_Rom  Thr_Hor_Cri
+Drama                 127          207          187          229
+Act_Adv               102         1039          463          899
+Com_Rom                59          504          635          409
+Thr_Hor_Cri            72          550          338         1130
