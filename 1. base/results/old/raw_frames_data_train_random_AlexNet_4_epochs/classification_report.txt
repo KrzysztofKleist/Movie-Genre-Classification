@@ -1,0 +1,14 @@
+batch_size: 64, lr: 0.005, num_epochs: 4, step_size: 7, gamma: 0.2
+Genre           Precision    Recall    F1-score    Support
+action              0.471     0.457       0.464      775.0
+adventure           0.471     0.487       0.479      758.0
+comedy              0.517     0.716       0.600      996.0
+crime               0.283     0.122       0.170      279.0
+drama               0.425     0.795       0.554     1020.0
+horror              0.304     0.413       0.350      344.0
+romance             0.339     0.089       0.141      225.0
+thriller            0.435     0.044       0.080      228.0
+micro avg           0.447     0.530       0.485     4625.0
+macro avg           0.406     0.390       0.355     4625.0
+weighted avg        0.439     0.530       0.455     4625.0
+samples avg         0.447     0.556       0.483     4625.0

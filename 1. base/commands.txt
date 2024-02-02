@@ -1,0 +1,50 @@
+ssh bvacchetti@daskalio.polito.it
+
+scp -r C:\movieframes\utilities.py bvacchetti@daskalio.polito.it:vectorscopes\movieframes
+
+scp -r bvacchetti@daskalio.polito.it:vectorscopes\movieframes\utilities.py C:\movieframes
+
+1. AlexNet raw, aug none, distribution random, 25 epochs
+python experiment.py --frames raw --augmentation none --data_distribution random --model alexnet --batch_size 64 --lr 0.005 --num_epochs 25 --step_size 5 --gamma 0.5
+
+2. AlexNet raw, aug all, distribution random, 25 epochs
+python experiment.py --frames raw --augmentation all --data_distribution random --model alexnet --batch_size 64 --lr 0.005 --num_epochs 25 --step_size 5 --gamma 0.5
+
+3. AlexNet raw, aug rare, distribution random, 25 epochs
+python experiment.py --frames raw --augmentation rare --data_distribution random --model alexnet --batch_size 64 --lr 0.005 --num_epochs 25 --step_size 5 --gamma 0.5
+
+4. AlexNet vec, aug none, distribution random, 25 epochs
+python experiment.py --frames vec --augmentation none --data_distribution random --model alexnet --batch_size 64 --lr 0.001 --num_epochs 25 --step_size 5 --gamma 0.5
+
+5. AlexNet vec, aug all, distribution random, 25 epochs
+python experiment.py --frames vec --augmentation all --data_distribution random --model alexnet --batch_size 64 --lr 0.001 --num_epochs 25 --step_size 5 --gamma 0.5
+
+6. AlexNet vec, aug rare, distribution random, 25 epochs
+python experiment.py --frames vec --augmentation rare --data_distribution random --model alexnet --batch_size 64 --lr 0.001 --num_epochs 25 --step_size 5 --gamma 0.5
+
+
+
+7. AlexNet raw, aug none, distribution random, 10 epochs
+python experiment.py --frames raw --augmentation none --data_distribution random --model alexnet --batch_size 64 --lr 0.005 --num_epochs 10 --step_size 4 --gamma 0.5
+
+8. AlexNet vec, aug rare, distribution random, 10 epochs
+python experiment.py --frames vec --augmentation rare --data_distribution random --model alexnet --batch_size 64 --lr 0.001 --num_epochs 10 --step_size 4 --gamma 0.5
+
+9. VGG-16 raw, aug none, distribution random, 25 epochs
+python experiment.py --frames raw --augmentation none --data_distribution random --model vgg --batch_size 16 --lr 0.005 --num_epochs 25 --step_size 5 --gamma 0.5
+
+10. VGG-16 vec, aug rare, distribution random, 25 epochs
+python experiment.py --frames vec --augmentation rare --data_distribution random --model vgg --batch_size 16 --lr 0.001 --num_epochs 25 --step_size 5 --gamma 0.5
+
+11. VGG-16 raw, aug none, distribution random, 6 epochs
+python experiment.py --frames raw --augmentation none --data_distribution random --model vgg --batch_size 16 --lr 0.005 --num_epochs 6 --step_size 2 --gamma 0.5
+
+12. VGG-16 vec, aug rare, distribution random, 6 epochs
+python experiment.py --frames vec --augmentation rare --data_distribution random --model vgg --batch_size 16 --lr 0.001 --num_epochs 6 --step_size 2 --gamma 0.5
+
+13. ResNet-50 raw, aug none, distribution random, 25 epochs
+python experiment.py --frames raw --augmentation none --data_distribution random --model resnet --batch_size 64 --lr 0.005 --num_epochs 25 --step_size 5 --gamma 0.5
+
+14. ResNet-50 vec, aug rare, distribution random, 25 epochs
+python experiment.py --frames vec --augmentation rare --data_distribution random --model resnet --batch_size 64 --lr 0.001 --num_epochs 25 --step_size 5 --gamma 0.5
+
