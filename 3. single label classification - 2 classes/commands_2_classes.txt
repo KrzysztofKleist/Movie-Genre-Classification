@@ -1,0 +1,11 @@
+1. ResNet-50 raw, aug all, distribution random, 5 epochs
+python experiment_2_classes.py --frames raw --augmentation all --data_distribution random --model resnet --batch_size 64 --lr 0.005 --num_epochs 5 --step_size 2 --gamma 0.01
+
+2. VGG-16 vec, aug all, distribution random, 5 epochs
+python experiment_2_classes.py --frames vec --augmentation all --data_distribution random --model vgg --batch_size 16 --lr 0.001 --num_epochs 5 --step_size 2 --gamma 0.01
+
+3. ResNet-50 raw, aug all, distribution separate, 5 epochs
+python experiment_2_classes.py --frames raw --augmentation all --data_distribution separate --model resnet --batch_size 64 --lr 0.005 --num_epochs 5 --step_size 2 --gamma 0.01
+
+4. VGG-16 vec, aug all, distribution separate, 5 epochs
+python experiment_2_classes.py --frames vec --augmentation all --data_distribution separate --model vgg --batch_size 16 --lr 0.001 --num_epochs 5 --step_size 2 --gamma 0.01

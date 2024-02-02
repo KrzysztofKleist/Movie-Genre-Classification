@@ -1,0 +1,13 @@
+batch_size: 64, lr: 0.005, num_epochs: 5, step_size: 2, gamma: 0.01
+accuracy: 70.22%
+epoch_time: 0:18:28 seconds
+Genre           Precision    Recall    F1-score    Support
+act_adv             0.744     0.691       0.717     2503.0
+thr_hor_cri         0.659     0.715       0.686     2090.0
+micro avg           0.702     0.702       0.702     4593.0
+macro avg           0.702     0.703       0.701     4593.0
+weighted avg        0.705     0.702       0.703     4593.0
+samples avg         0.702     0.702       0.702     4593.0
+Genre             Act_Adv  Thr_Hor_Cri
+Act_Adv              1730          773
+Thr_Hor_Cri           595         1495
